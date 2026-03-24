@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>SENTINEL | RELÁMPAGO DEL CATATUMBO</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="assets/js/tailwind.config.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;700;800&family=Space+Grotesk:wght@300;400;700&family=JetBrains+Mono:wght@100;300;400&family=Noto+Serif:ital,wght@0,200;0,300;1,200&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="assets/js/main.js" defer></script>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary-fixed overflow-x-hidden">
+
+<nav class="fixed top-0 w-full z-50 bg-[#030408]/80 backdrop-blur-xl border-b border-[rgba(132,149,136,0.2)] flex justify-between items-center px-12 py-6 w-full font-['Nunito_Sans'] tracking-[0.05em] font-light">
+    <div class="text-2xl font-light tracking-[0.2em] text-[#00FFA3] uppercase">SENTINEL</div>
+    <div class="hidden md:flex items-center gap-10">
+        <a href="index.html" class="text-[#F4F5F6]/60 hover:text-[#00FFA3] transition-colors duration-300">El Atlas</a>
+        <a href="vortice.html" class="text-[#00FFA3] border-b border-[#00FFA3] pb-1 hover:text-[#00FFA3] transition-colors duration-300">Vórtice</a>
+        <a href="telemetria.html" class="text-[#F4F5F6]/60 hover:text-[#00FFA3] transition-colors duration-300">Telemetría</a>
+        <a href="archivo.html" class="text-[#F4F5F6]/60 hover:text-[#00FFA3] transition-colors duration-300">Archivo</a>
+        <a href="#" class="text-[#F4F5F6]/60 hover:text-[#00FFA3] transition-colors duration-300">Equipamiento</a>
+        <a href="#" class="text-[#F4F5F6]/60 hover:text-[#00FFA3] transition-colors duration-300">Sistema</a>
+    </div>
+    <div class="flex items-center gap-6">
+        <button class="text-[#F4F5F6]/60 hover:text-[#00FFA3] transition-all active:opacity-80 active:scale-95">
+            <span class="material-symbols-outlined" data-icon="settings">settings</span>
+        </button>
+        <button class="text-[#F4F5F6]/60 hover:text-[#00FFA3] transition-all active:opacity-80 active:scale-95">
+            <span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+        </button>
+    </div>
+</nav>
+
+<main class="relative pt-24 min-h-screen">
+    <section class="relative h-[921px] w-full flex flex-col justify-center px-12 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmVIOx2L_Jq-4xqWQP52HEKpA5kwD7TFbrBGdbcS1KFPa7ogSHMbs3fXVZd-SGObM21kRdHkLA302FFgztI_hxnrf5Puuiy2B4HdEsxjUNGk2wNc0KctV-nmVYCte8DWKlwOJq2poyGojDmuVG1UxWUVJQuoonW6MK0uEnQ1TlQl6fw0p6w4bTaLthazq74F6_HWdiAFlbLpdTDshsn7J-07whz9UafQs6waq7lyO7Q9NjgXzNeadBIMLvdmSZAV2SYP3iS8r9uUM" alt="Epic lightning striking over a dark body of water" class="w-full h-full object-cover opacity-60 grayscale hover:grayscale-0 transition-all duration-1000 parallax-bg" />
+            <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/40"></div>
+        </div>
+        <div class="relative z-10 max-w-7xl gsap-fade-in">
+            <p class="font-mono text-primary text-sm tracking-[0.3em] mb-4 uppercase">Expedición: Delta del Catatumbo</p>
+            <h1 class="font-headline font-extrabold text-7xl md:text-9xl tracking-tighter leading-none mb-8 text-on-surface">RELÁMPAGO DEL<br/>CATATUMBO</h1>
+            <div class="flex flex-col md:flex-row gap-16 items-start">
+                <div class="max-w-xl">
+                    <p class="font-serif text-2xl font-light leading-relaxed text-on-surface-variant italic">"La tormenta eterna donde el cielo se funde con el asfalto del agua. Una descarga de 1.6 millones de voltios que nunca duerme."</p>
+                </div>
+                <div class="flex flex-col gap-2 font-mono text-[10px] text-primary/60 border-l border-outline-variant pl-6">
+                    <div class="flex justify-between w-48"><span>LATITUD</span><span>9.3333° N</span></div>
+                    <div class="flex justify-between w-48"><span>LONGITUD</span><span>71.7500° W</span></div>
+                    <div class="flex justify-between w-48"><span>FRECUENCIA</span><span>280/hr</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="px-12 py-24 bg-background">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+            <div class="md:col-span-4 bg-surface-container-low p-10 flex flex-col justify-between border-l-2 border-primary gsap-fade-in">
+                <div>
+                    <span class="font-mono text-[10px] text-primary mb-6 block">MODULO_BIO_QUIMICO</span>
+                    <h3 class="text-3xl font-headline font-light mb-6">El Generador de Ozono de la Tierra</h3>
+                    <p class="text-on-surface-variant font-body leading-relaxed">Aislado en la cuenca del Lago de Maracaibo, este fenómeno es considerado la principal fuente de regeneración de la capa de ozono en el planeta.</p>
+                </div>
+                <div class="mt-12 flex items-center gap-4 text-primary text-sm font-mono cursor-pointer hover:gap-6 transition-all">
+                    EXPLORAR TELEMETRÍA QUÍMICA <span class="material-symbols-outlined">east</span>
+                </div>
+            </div>
+            
+            <div class="md:col-span-8 relative aspect-video bg-surface-container-high group overflow-hidden gsap-fade-in">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMHthvArDl2s3cwerxsdefWknwzEAhjVHRmz_webB520mc19vNOib-Qqx0GuJEeczUhIOCCJe12bQ9dIF5hw2NZSqzIVcm4V5fY9AOCVBGFH8wky1BRAOgFh_dORE845HZlRf0-FZaWeT-ki9t30jCrN2VSJDS-W5D4yaFqg041Ly_AaiXvrDPsn3kTOFFcSga_TwD1HG-w2VIfK0TzuiG3q7mmxb-6brgXSp5-g-4BMa43Bt9QYT2ip0TAt1gmZKIjXGsGKpJI7s" alt="Intricate blue and white lightning branching across clouds" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-[3s]" />
+                <div class="absolute bottom-8 left-8 glass-panel p-6 border border-outline-variant">
+                    <p class="font-mono text-[10px] text-white/40 mb-2">CAPTURA: SENTINEL-04</p>
+                    <p class="text-sm font-body tracking-wider">DESCARGA CLOUD-TO-CLOUD [TIPO B]</p>
+                </div>
+            </div>
+            
+            <div class="md:col-span-3 aspect-[3/4] overflow-hidden relative group gsap-fade-in">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRra6LWpT2bHAm4yw8jAM-qZVepuhnmPeGzdZovuRJkppGIdjP50obZP3KQ2MJuKnc5FRQmCIJRCEZKwmHqwCZTlB5cpESs2envPv-5lBwYSs_weF_NFfOz8vsiPoatdOUiAX1qvqyCiVATGtS5L12_mgt6vE2fLilsiWIl1OAnwO6flzF5nY673uwOpyaSgV9v6u8hthkhIdpuhkK0mfqlpxUwDzdP80W6__swucoupgavWz4VnN_5fmqGSNgTIA5ydsHdZm_VqA" alt="Dark swamp landscape under a stormy purple sky" class="w-full h-full object-cover opacity-50 grayscale group-hover:grayscale-0 transition-all" />
+                <div class="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
+            </div>
+            
+            <div class="md:col-span-6 bg-surface-variant p-12 glass-panel flex flex-col justify-center gsap-fade-in">
+                <h2 class="text-5xl font-serif italic font-extralight mb-8 leading-tight">El rugido ausente.</h2>
+                <p class="text-lg font-body text-on-surface-variant leading-relaxed mb-8">Lo más inquietante del Catatumbo es el silencio. A menudo, las descargas ocurren a tal altitud que el trueno se disipa antes de tocar tierra, dejando solo un ballet eléctrico mudo que ilumina las canoas de los pescadores añú.</p>
+                <div class="h-[1px] w-full bg-outline-variant"></div>
+                <div class="mt-8 flex justify-between font-mono text-xs">
+                    <span class="text-primary">ACTIVO</span>
+                    <span class="text-white/30">NIVEL DE ENERGÍA: 8.4 GW</span>
+                </div>
+            </div>
+            
+            <div class="md:col-span-3 flex flex-col gap-8 gsap-fade-in">
+                <div class="h-1/2 bg-surface-container-high p-6 border-t border-primary">
+                    <span class="material-symbols-outlined text-primary mb-4" data-icon="air">air</span>
+                    <p class="font-mono text-xs mb-2">CORRIENTES TÉRMICAS</p>
+                    <p class="text-sm text-on-surface-variant">El choque de los vientos de la Cordillera de los Andes con el calor del Caribe.</p>
+                </div>
+                <div class="h-1/2 bg-surface-container-lowest p-6 border border-outline-variant flex items-center justify-center">
+                    <div class="text-center">
+                        <p class="font-mono text-3xl text-primary font-bold">140-160</p>
+                        <p class="font-mono text-[10px] text-white/40 uppercase">Días al Año</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="py-24 px-12 border-t border-outline-variant gsap-fade-in">
+        <div class="flex flex-col md:flex-row gap-24 items-center">
+            <div class="w-full md:w-1/2">
+                <div class="relative w-full aspect-square border border-outline-variant p-2">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSMyeXGuGXtju0jj3OPlPSw1IhAaEfHYQryJPEi_4bBHagn68q6wXcVEfDlkSQ8eqWhDdfPjKfcC6vHQzj4oP1UnHIMWpP7lKo46hKNgv9cVR9gyoscF6kK3Fz1aBAJ96JoeKeRO_Ql6DVWLW0C3_b_USbjmbn54Ce0hr0ayP7J4ExJRHy9dj5JU9c7K91ye8a9sPAve8OHM-pleQGUMDbdgeO88NwRyunzzCH1208y5KUC2C_UDUys5y1FctKRNuOHGxwl08bE-I" alt="Technical map showing the topography of Lake Maracaibo" class="w-full h-full object-cover opacity-40 grayscale" />
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                        <div class="w-4 h-4 bg-primary animate-pulse"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 space-y-8">
+                <h2 class="text-6xl font-headline font-extralight tracking-widest text-primary uppercase">Ubicación</h2>
+                <p class="text-2xl font-body text-on-surface">ZULIA, VENEZUELA</p>
+                <p class="text-on-surface-variant font-light text-lg">El epicentro se encuentra sobre el pantano formado en el punto donde el río Catatumbo desemboca en el lago de Maracaibo. Este ecosistema único captura los gases metanos de los pantanos, alimentando el ciclo eléctrico.</p>
+                <button class="px-12 py-4 bg-primary text-on-primary font-body font-bold text-sm tracking-widest hover:brightness-110 transition-all">DESCARGAR COORDENADAS</button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="w-full py-8 bg-[#030408] border-t border-[rgba(132,149,136,0.1)] flex flex-col md:flex-row justify-between items-center px-12 max-w-full font-mono text-[10px] tracking-tighter uppercase mb-6">
+    <div class="text-[#00FFA3]">© 2024 SENTINEL RESEARCH. ALL TELEMETRY ENCRYPTED.</div>
+    <div class="flex gap-10 mt-4 md:mt-0">
+        <a class="text-[#F4F5F6]/40 hover:text-[#F4F5F6] transition-colors" href="#">Privacy</a>
+        <a class="text-[#F4F5F6]/40 hover:text-[#F4F5F6] transition-colors" href="#">Protocols</a>
+        <a class="text-[#F4F5F6]/40 hover:text-[#F4F5F6] transition-colors" href="#">Coordinates</a>
+    </div>
+</footer>
+
+</body>
+</html>

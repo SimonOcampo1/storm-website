@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;700;800&amp;family=Space+Grotesk:wght@300;400;700&amp;family=JetBrains+Mono:wght@300;400;700&amp;family=Noto+Serif:wght@200;300&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed": "#111c2c",
+              "tertiary": "#fefbff",
+              "error": "#ffb4ab",
+              "on-secondary-container": "#aab6cc",
+              "inverse-primary": "#006d43",
+              "on-tertiary-fixed": "#191b26",
+              "on-tertiary": "#2e303b",
+              "on-primary": "#003920",
+              "surface-container-high": "#282a30",
+              "on-primary-fixed-variant": "#005231",
+              "surface-tint": "#00e290",
+              "outline-variant": "rgba(132, 149, 136, 0.2)",
+              "surface-dim": "#111319",
+              "secondary": "#bcc7dd",
+              "on-primary-container": "#007146",
+              "inverse-surface": "#e2e2ea",
+              "secondary-fixed": "#d8e3fa",
+              "surface-container-low": "#1a1b21",
+              "tertiary-container": "#dedeed",
+              "surface": "#111319",
+              "inverse-on-surface": "#2f3037",
+              "on-secondary-fixed-variant": "#3c475a",
+              "background": "#030408",
+              "tertiary-fixed": "#e1e1f0",
+              "secondary-fixed-dim": "#bcc7dd",
+              "on-error-container": "#ffdad6",
+              "on-background": "#e2e2ea",
+              "secondary-container": "#3c475a",
+              "surface-variant": "rgba(11, 13, 23, 0.7)",
+              "on-tertiary-container": "#60626e",
+              "on-secondary": "#263142",
+              "on-tertiary-fixed-variant": "#444652",
+              "on-error": "#690005",
+              "surface-bright": "#373940",
+              "primary-container": "#00ffa3",
+              "primary-fixed-dim": "#00e290",
+              "primary-fixed": "#52ffac",
+              "outline": "#849588",
+              "error-container": "#93000a",
+              "surface-container-lowest": "#0c0e14",
+              "on-surface-variant": "#b9cbbd",
+              "tertiary-fixed-dim": "#c5c5d4",
+              "on-surface": "#f4f5f6",
+              "surface-container-highest": "rgba(51, 52, 59, 0.7)",
+              "primary": "#00ffa3",
+              "on-primary-fixed": "#002111",
+              "surface-container": "#1e1f26"
+            },
+            fontFamily: {
+              "headline": ["Nunito Sans"],
+              "body": ["Space Grotesk"],
+              "label": ["Space Grotesk"],
+              "mono": ["JetBrains Mono"],
+              "serif": ["Noto Serif"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .blur-bg {
+            backdrop-filter: blur(20px);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-[#030408] text-on-surface font-body min-h-screen overflow-x-hidden selection:bg-primary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#030408]/80 backdrop-blur-xl border-b border-[rgba(132,149,136,0.2)] flex justify-between items-center px-12 py-6 w-full">
+<div class="text-2xl font-light tracking-[0.2em] text-[#00FFA3] uppercase">SENTINEL</div>
+<div class="hidden md:flex items-center gap-10 font-['Nunito_Sans'] tracking-[0.05em] font-light">
+<a class="text-[#F4F5F6]/60 hover:text-[#00FFA3] transition-colors duration-300" href="#">El Atlas</a>
+<a class="text-[#F4F5F6]/60 hover:text-[#00FFA3] transition-colors duration-300" href="#">Vórtice</a>
+<a class="text-[#F4F5F6]/60 hover:text-[#00FFA3] transition-colors duration-300" href="#">Telemetría</a>
+<a class="text-[#F4F5F6]/60 hover:text-[#00FFA3] transition-colors duration-300" href="#">Archivo</a>
+<a class="text-[#00FFA3] border-b border-[#00FFA3] pb-1 hover:text-[#00FFA3] transition-colors duration-300" href="#">Equipamiento</a>
+<a class="text-[#F4F5F6]/60 hover:text-[#00FFA3] transition-colors duration-300" href="#">Sistema</a>
+</div>
+<div class="flex items-center gap-6 text-[#00FFA3]">
+<button class="hover:opacity-80 transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<button class="hover:opacity-80 transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</nav>
+<main class="pt-32 pb-20 px-12 max-w-[1600px] mx-auto">
+<!-- Header Section -->
+<header class="mb-20 flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div class="space-y-2">
+<div class="flex items-center gap-3 text-primary font-mono text-sm tracking-widest mb-4">
+<span class="w-8 h-[1px] bg-primary"></span>
+<span>MISSION OPERATIONAL PARAMETERS</span>
+</div>
+<h1 class="text-6xl md:text-8xl font-headline font-extralight tracking-[0.1em] text-on-surface uppercase">PERFIL DE MISIÓN</h1>
+</div>
+<div class="flex flex-col items-end font-mono text-xs text-on-surface/40 tracking-tighter">
+<span>LAT: 64.1265° N</span>
+<span>LON: 21.8174° W</span>
+<span class="text-primary mt-1">STATUS: ENCRYPTED_LINK_ESTABLISHED</span>
+</div>
+</header>
+<!-- Main Layout Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-24">
+<!-- Left Column: Route Map & Telemetry -->
+<div class="lg:col-span-7 space-y-16">
+<!-- Route Map Container -->
+<div class="relative aspect-video w-full bg-surface-container-lowest border border-outline-variant group">
+<div class="absolute inset-0 opacity-20 pointer-events-none" style="background-image: radial-gradient(circle at 2px 2px, rgba(0, 255, 163, 0.15) 1px, transparent 0); background-size: 40px 40px;"></div>
+<img alt="Monochromatic topographical satellite map with technical overlays" class="w-full h-full object-cover grayscale contrast-125 opacity-40 mix-blend-luminosity" data-alt="Technical monochromatic terrain map with expedition lines" data-location="Iceland Highlands" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIFboooYWGqaFv7rIwa8HEQCpJKLYK0dniU7wgRnhQUuu-HHOMhXuribYpHZKI4-bJE-Z9iDsK2zg0gMRhbeOg5Zs0jOsSJmZFik9JMCZmvbr0EcryJ62rRAuck5c0lpVXlgF9vYdI1_EhIyDHavv6NPO9zlAXxUEN-pB2cdQVxgJJnuqVjV5qxt7B_CTLIQwtII_lKCafzLKWJdQYNjQcFMTWs2mRRQ1mQj_px2TzHJSKAK5SkJc2zMe69KBrK4FGW_Qm2yY42ps"/>
+<!-- SVG Overlay for Route -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" viewbox="0 0 800 450">
+<path d="M100,350 L250,280 L400,310 L550,150 L700,100" fill="none" stroke="#00FFA3" stroke-dasharray="4 4" stroke-width="1.5"></path>
+<circle cx="100" cy="350" fill="#00FFA3" r="4"></circle>
+<circle cx="700" cy="100" fill="#00FFA3" r="4"></circle>
+<text fill="#00FFA3" font-family="JetBrains Mono" font-size="10" x="110" y="365">BASE_ALPHA</text>
+<text fill="#00FFA3" font-family="JetBrains Mono" font-size="10" text-anchor="end" x="680" y="90">OBJECTIVE_VOID</text>
+</svg>
+<!-- HUD Overlays -->
+<div class="absolute top-6 left-6 font-mono text-[10px] text-primary space-y-1">
+<div>SCAN_MODE: TOPOGRAPHICAL</div>
+<div>AZIMUTH: 284.5°</div>
+</div>
+<div class="absolute bottom-6 right-6 font-mono text-[10px] text-on-surface/40 text-right">
+<div>REF_GRD: UTM_ZONE_27N</div>
+<div>SCALE: 1:25,000</div>
+</div>
+</div>
+<!-- Requirement Matrix Grid -->
+<section class="space-y-8">
+<h3 class="font-mono text-xs tracking-widest text-on-surface/60 uppercase">Requirement Matrix_</h3>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-px bg-outline-variant">
+<!-- Matrix Item 1 -->
+<div class="bg-background p-6 space-y-4">
+<span class="font-mono text-[10px] text-primary/60">01_ENVIRONMENT</span>
+<div class="text-xl font-headline font-light">Sub-Zero Ops</div>
+<p class="text-xs text-on-surface/40 leading-relaxed font-body">Certified for sustained -40°C exposure in high-velocity wind zones.</p>
+</div>
+<!-- Matrix Item 2 -->
+<div class="bg-background p-6 space-y-4">
+<span class="font-mono text-[10px] text-primary/60">02_CONNECTIVITY</span>
+<div class="text-xl font-headline font-light">Burstable Sat</div>
+<p class="text-xs text-on-surface/40 leading-relaxed font-body">Minimum 400Mbps encrypted uplink for real-time telemetry stream.</p>
+</div>
+<!-- Matrix Item 3 -->
+<div class="bg-background p-6 space-y-4">
+<span class="font-mono text-[10px] text-primary/60">03_AUTONOMY</span>
+<div class="text-xl font-headline font-light">Solar Hybrid</div>
+<p class="text-xs text-on-surface/40 leading-relaxed font-body">14-day mission window without external power replenishment.</p>
+</div>
+<!-- Matrix Item 4 -->
+<div class="bg-background p-6 space-y-4">
+<span class="font-mono text-[10px] text-primary/60">04_STEALTH</span>
+<div class="text-xl font-headline font-light">Low Profile</div>
+<p class="text-xs text-on-surface/40 leading-relaxed font-body">Radar cross-section reduction optimized for atmospheric research.</p>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Environmental Risk & Expedition Detail -->
+<div class="lg:col-span-5 space-y-16">
+<!-- Risk Dashboard -->
+<div class="p-10 bg-surface-variant blur-bg border border-outline-variant">
+<div class="flex justify-between items-start mb-12">
+<h2 class="font-serif text-3xl font-extralight tracking-wide italic">Risk Assessment</h2>
+<span class="font-mono text-[10px] bg-primary/10 text-primary px-3 py-1">LEVEL: ELEVATED</span>
+</div>
+<div class="space-y-10">
+<!-- Risk Item: Atmospheric Pressure -->
+<div class="space-y-3">
+<div class="flex justify-between font-mono text-[10px] tracking-tighter uppercase">
+<span>Atmospheric Volatility</span>
+<span class="text-primary">84% CRITICAL</span>
+</div>
+<div class="h-px w-full bg-outline-variant relative">
+<div class="absolute top-0 left-0 h-full bg-primary" style="width: 84%;"></div>
+<div class="absolute top-[-3px] left-[84%] w-[7px] h-[7px] bg-primary rotate-45"></div>
+</div>
+</div>
+<!-- Risk Item: Thermal Instability -->
+<div class="space-y-3">
+<div class="flex justify-between font-mono text-[10px] tracking-tighter uppercase">
+<span>Thermal Instability</span>
+<span>22% NOMINAL</span>
+</div>
+<div class="h-px w-full bg-outline-variant relative">
+<div class="absolute top-0 left-0 h-full bg-on-surface/20" style="width: 22%;"></div>
+</div>
+</div>
+<!-- Risk Item: Electronic Interference -->
+<div class="space-y-3">
+<div class="flex justify-between font-mono text-[10px] tracking-tighter uppercase">
+<span>EMI Fluctuations</span>
+<span class="text-primary">59% WARNING</span>
+</div>
+<div class="h-px w-full bg-outline-variant relative">
+<div class="absolute top-0 left-0 h-full bg-primary/50" style="width: 59%;"></div>
+</div>
+</div>
+</div>
+<div class="mt-16 grid grid-cols-2 gap-8 border-t border-outline-variant pt-8">
+<div>
+<div class="font-mono text-[9px] text-on-surface/30 mb-1">STORM_ETA</div>
+<div class="text-xl font-headline tracking-tighter">04:22:15</div>
+</div>
+<div>
+<div class="font-mono text-[9px] text-on-surface/30 mb-1">VORTEX_CLASS</div>
+<div class="text-xl font-headline tracking-tighter">V4_EXTREME</div>
+</div>
+</div>
+</div>
+<!-- Expedition Gear Feed -->
+<div class="space-y-8">
+<h3 class="font-mono text-xs tracking-widest text-on-surface/60 uppercase">Active Logistics_</h3>
+<div class="space-y-4">
+<div class="flex items-center justify-between group cursor-pointer">
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-primary/60" data-icon="satellite_alt">satellite_alt</span>
+</div>
+<div>
+<div class="text-sm font-headline tracking-wide uppercase">Sentinel Hub S1</div>
+<div class="font-mono text-[10px] text-on-surface/40">ID: ST-0988-X</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface/20 group-hover:text-primary transition-colors" data-icon="arrow_forward">arrow_forward</span>
+</div>
+<div class="w-full h-px bg-outline-variant/30"></div>
+<div class="flex items-center justify-between group cursor-pointer">
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-primary/60" data-icon="ac_unit">ac_unit</span>
+</div>
+<div>
+<div class="text-sm font-headline tracking-wide uppercase">Thermal Exoshell</div>
+<div class="font-mono text-[10px] text-on-surface/40">ID: TH-MK4-ALPHA</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface/20 group-hover:text-primary transition-colors" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- CTA -->
+<button class="w-full bg-primary text-on-primary py-6 font-headline font-bold tracking-[0.2em] uppercase hover:opacity-90 active:scale-[0.98] transition-all">
+                    INICIAR SECUENCIA DE DESPLIEGUE
+                </button>
+</div>
+</div>
+<!-- Atmospheric Texture Background Element -->
+<div class="fixed inset-0 pointer-events-none opacity-5 z-[-1]" data-alt="Subtle dark cosmic nebulae texture" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCfj3p_k3GvMzW3bvyIIdt1VDJNLDzNuLDyNPx831w-MXSSVOOAkPDstDTMUL54lfBjz-aBiaWE0Tb6-XEMPlXjxmc9KlijS4eg4wSth5G6nkSiW8qc1t45N2jF3z4_Kb8jdhUMvDYJT1MknzHe4IV5qK4ifjvU4yIQ33UMBRCPZcDOeTVdzdFAyBZviklM9qobY5EYsh4gc-jZ_vgg__frnxETr5i1NfJlQ1TJbYbcbjE_J9_8ah0gSzkzqil_hdW_ko-hu86qdFs'); background-size: cover; background-position: center;"></div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#030408] w-full py-8 border-t border-[rgba(132,149,136,0.1)] flex flex-col md:flex-row justify-between items-center px-12 max-w-full">
+<div class="font-mono text-[10px] tracking-tighter uppercase text-[#F4F5F6]/40 mb-4 md:mb-0">
+            © 2024 SENTINEL RESEARCH. ALL TELEMETRY ENCRYPTED.
+        </div>
+<div class="flex gap-10 font-mono text-[10px] tracking-tighter uppercase">
+<a class="text-[#F4F5F6]/40 hover:text-[#F4F5F6] transition-colors" href="#">Privacy</a>
+<a class="text-[#F4F5F6]/40 hover:text-[#F4F5F6] transition-colors" href="#">Protocols</a>
+<a class="text-[#F4F5F6]/40 hover:text-[#F4F5F6] transition-colors" href="#">Coordinates</a>
+</div>
+</footer>
+</body></html>

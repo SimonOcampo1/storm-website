@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>SENTINEL | EL ATLAS</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="assets/js/tailwind.config.js"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,700;1,200&family=Space+Grotesk:wght@300;500;700&family=JetBrains+Mono:wght@200;400&family=Noto+Serif:wght@200;300&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="assets/js/main.js" defer></script>
+</head>
+<body class="bg-background text-on-surface font-body overflow-x-hidden selection:bg-primary selection:text-background">
+
+<!-- Header Navigation Shell -->
+<header class="fixed top-0 w-full z-50 bg-[#030408]/80 backdrop-blur-xl border-b border-[rgba(132,149,136,0.2)] flex justify-between items-center px-12 py-6">
+    <div class="text-2xl font-light tracking-[0.2em] text-[#00FFA3] uppercase">SENTINEL</div>
+    <nav class="hidden md:flex gap-8 items-center font-['Nunito_Sans'] tracking-[0.05em] font-light">
+        <a href="index.html" class="text-[#00FFA3] border-b border-[#00FFA3] pb-1 hover:text-[#00FFA3] transition-colors duration-300">El Atlas</a>
+        <a href="vortice.html" class="text-[#F4F5F6]/60 hover:text-[#00FFA3] transition-colors duration-300">Vórtice</a>
+        <a href="telemetria.html" class="text-[#F4F5F6]/60 hover:text-[#00FFA3] transition-colors duration-300">Telemetría</a>
+        <a href="archivo.html" class="text-[#F4F5F6]/60 hover:text-[#00FFA3] transition-colors duration-300">Archivo</a>
+        <a href="#" class="text-[#F4F5F6]/60 hover:text-[#00FFA3] transition-colors duration-300">Equipamiento</a>
+        <a href="#" class="text-[#F4F5F6]/60 hover:text-[#00FFA3] transition-colors duration-300">Sistema</a>
+    </nav>
+    <div class="flex items-center gap-6">
+        <button class="hover:text-[#00FFA3] transition-colors duration-300 text-[#F4F5F6]/60 active:opacity-80 active:scale-95">
+            <span class="material-symbols-outlined" data-icon="settings">settings</span>
+        </button>
+        <button class="hover:text-[#00FFA3] transition-colors duration-300 text-[#F4F5F6]/60 active:opacity-80 active:scale-95">
+            <span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+        </button>
+    </div>
+</header>
+
+<!-- Main Expedition Canvas -->
+<main class="relative min-h-screen pt-32 pb-12 px-12 overflow-hidden">
+    <!-- Background Layer: Cinematic Storm Scene -->
+    <div class="fixed inset-0 z-[-1]">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuARrrenRQkQ2swGPthcjwbb02LHOzg5HUjfQmgYfGVWfN7h-3oU2hMYc6vcSnMRr1u42cvjwHKFXiAlp1dD29INzYXxkI3M2vsbhZX4jFCI5xa62YtG_lcVDqvgKtn3is7MDJ47xFn735StVkpEcSO88A2jAPz37jpUQJqLojZWZVcTrNripE6cLe1lkdboAY3Zh6OOXVTBSTtMPsk7w_CPcmBYRSTRhL37863EijRde4y93RBXnmVzlZPQYu9aqCcdYzHwqPrEFzo" alt="Dark stormy clouds and atmospheric lightning at night" class="w-full h-full object-cover opacity-60 grayscale-[0.2] parallax-bg" />
+        <div class="absolute inset-0 cinematic-vignette"></div>
+        <div class="absolute inset-0 grid-overlay"></div>
+        <div class="absolute top-0 left-0 w-full h-full opacity-30 mix-blend-screen bg-gradient-to-b from-[#00FFA3]/20 via-transparent to-transparent pointer-events-none"></div>
+    </div>
+
+    <!-- Atmospheric Title Section -->
+    <section class="relative z-10 mt-12 mb-24 gsap-fade-in">
+        <h1 class="font-headline text-[12vw] font-light leading-none tracking-[0.15em] text-on-surface opacity-90 select-none">EL ATLAS</h1>
+        <div class="flex items-center gap-6 mt-4">
+            <div class="h-[1px] w-24 bg-primary"></div>
+            <p class="font-mono text-xs tracking-widest text-primary uppercase">Geospatial Telemetry System v4.0.2</p>
+            <div class="h-[1px] flex-grow bg-outline-variant"></div>
+        </div>
+    </section>
+
+    <!-- Bento Grid: Interactive Radar and Telemetry -->
+    <div class="grid grid-cols-12 gap-10">
+        <!-- Main Radar Visualization -->
+        <div class="col-span-12 lg:col-span-8 relative group gsap-fade-in">
+            <div class="absolute -top-4 -left-4 font-mono text-[10px] text-primary/40 uppercase">Global Radar Node 01</div>
+            <div class="bg-surface-variant backdrop-blur-2xl p-1 relative overflow-hidden ring-1 ring-outline-variant">
+                <div class="relative aspect-video w-full overflow-hidden">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbiimM2JgPaVL_jEhwcafaIPAaE1aBEhOOxn46WkEwJZ4vrTv4sPHt6a7L31CouBs6ai4wkUkWTF5fKuqM3CBnJSNA_gy_nEW-P4CrtYhz0pRjPxy7lKnKiEGIlQX0U6qNfHG-NyRkU5GR3lNUG72hvrVb0v6FtCfq3GoOIqPgRyZjk3vreYiXL5MliBsDMOxwfMmdhjjqSm-aT_gOgcsEsPTkTUyoap1VBAO-MRu8W67naNu2elcHXUsBPiWRXRfPca1xiw5Te-s" alt="Digital topographical map with storm heat signatures" class="w-full h-full object-cover" />
+                    <div class="absolute inset-0 bg-gradient-to-r from-primary/10 to-transparent w-1/2 h-full opacity-20 origin-left"></div>
+                    <div class="absolute top-[30%] left-[45%] flex flex-col items-center">
+                        <span class="relative flex h-3 w-3">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+                        </span>
+                        <div class="mt-2 bg-background/90 backdrop-blur-md px-2 py-1 border border-primary/30">
+                            <p class="font-mono text-[9px] text-on-surface">VO-88 STORM</p>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-6 left-6 flex gap-4">
+                        <button class="bg-primary px-6 py-2 text-on-primary font-bold text-xs uppercase tracking-widest hover:brightness-110 transition-all">REC_TELEMETRY</button>
+                        <button class="bg-background/80 backdrop-blur-md border border-primary px-6 py-2 text-primary font-mono text-xs uppercase hover:bg-primary/10 transition-all">VIEW_3D_MODEL</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Telemetry Sidebar Cluster -->
+        <div class="col-span-12 lg:col-span-4 flex flex-col gap-10">
+            <!-- Atmospheric Readout -->
+            <div class="bg-surface-variant backdrop-blur-xl p-8 ring-1 ring-outline-variant gsap-fade-in">
+                <h3 class="font-mono text-[10px] text-primary tracking-widest uppercase mb-8 flex items-center gap-2">
+                    <span class="material-symbols-outlined text-[14px]">sensors</span> Current Vitals
+                </h3>
+                <div class="space-y-6">
+                    <div class="flex justify-between items-end border-b border-outline-variant pb-2">
+                        <div>
+                            <p class="font-mono text-[10px] opacity-40 uppercase">Magnetic Variance</p>
+                            <p class="text-2xl font-light">42.88 <span class="text-xs opacity-40">nT</span></p>
+                        </div>
+                        <div class="text-primary font-mono text-[10px] pb-1">+0.02%</div>
+                    </div>
+                    <div class="flex justify-between items-end border-b border-outline-variant pb-2">
+                        <div>
+                            <p class="font-mono text-[10px] opacity-40 uppercase">Solar Flux Index</p>
+                            <p class="text-2xl font-light">184.2 <span class="text-xs opacity-40">SFI</span></p>
+                        </div>
+                        <div class="text-error font-mono text-[10px] pb-1">WARN</div>
+                    </div>
+                    <div class="flex justify-between items-end border-b border-outline-variant pb-2">
+                        <div>
+                            <p class="font-mono text-[10px] opacity-40 uppercase">Proton Density</p>
+                            <p class="text-2xl font-light">12.4 <span class="text-xs opacity-40">P/CM³</span></p>
+                        </div>
+                        <div class="text-primary font-mono text-[10px] pb-1">STABLE</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Aurora Projection Status -->
+            <div class="bg-surface-variant backdrop-blur-xl p-8 ring-1 ring-outline-variant flex-grow gsap-fade-in">
+                <h3 class="font-mono text-[10px] text-primary tracking-widest uppercase mb-8">Aurora Propagation</h3>
+                <div class="relative h-24 bg-surface-container-low overflow-hidden">
+                    <div class="absolute inset-0 flex items-center justify-center gap-[2px]">
+                        <div class="w-1 bg-primary/20 h-4"></div>
+                        <div class="w-1 bg-primary/30 h-8"></div>
+                        <div class="w-1 bg-primary/50 h-16"></div>
+                        <div class="w-1 bg-primary h-20"></div>
+                        <div class="w-1 bg-primary/70 h-14"></div>
+                        <div class="w-1 bg-primary/40 h-10"></div>
+                        <div class="w-1 bg-primary/20 h-6"></div>
+                        <div class="w-1 bg-primary/10 h-3"></div>
+                        <div class="w-1 bg-primary/30 h-12"></div>
+                        <div class="w-1 bg-primary h-18"></div>
+                        <div class="w-1 bg-primary/50 h-10"></div>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <p class="font-body text-sm font-light leading-relaxed opacity-60">High-energy particle influx detected at the 72nd parallel. Aurora Borealis visibility projected at 88% probability for the next lunar cycle.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lower Grid Elements -->
+        <div class="col-span-12 md:col-span-4 bg-surface-variant backdrop-blur-xl p-8 ring-1 ring-outline-variant flex items-center justify-between gsap-fade-in">
+            <div>
+                <h4 class="font-mono text-[10px] uppercase opacity-40 tracking-widest mb-1">Active Storm Cells</h4>
+                <p class="text-4xl font-serif font-light">14</p>
+            </div>
+            <span class="material-symbols-outlined text-4xl text-primary/20" data-icon="thunderstorm">thunderstorm</span>
+        </div>
+        <div class="col-span-12 md:col-span-4 bg-surface-variant backdrop-blur-xl p-8 ring-1 ring-outline-variant flex items-center justify-between gsap-fade-in">
+            <div>
+                <h4 class="font-mono text-[10px] uppercase opacity-40 tracking-widest mb-1">Station Connectivity</h4>
+                <p class="text-4xl font-serif font-light">99.9<span class="text-lg opacity-40">%</span></p>
+            </div>
+            <span class="material-symbols-outlined text-4xl text-primary/20" data-icon="cell_tower">cell_tower</span>
+        </div>
+        <div class="col-span-12 md:col-span-4 bg-surface-variant backdrop-blur-xl p-8 ring-1 ring-outline-variant flex items-center justify-between gsap-fade-in">
+            <div>
+                <h4 class="font-mono text-[10px] uppercase opacity-40 tracking-widest mb-1">Horizon Depth</h4>
+                <p class="text-4xl font-serif font-light">12.4<span class="text-lg opacity-40">KM</span></p>
+            </div>
+            <span class="material-symbols-outlined text-4xl text-primary/20" data-icon="altitude">altitude</span>
+        </div>
+    </div>
+    
+    <div class="fixed bottom-32 left-0 w-full px-12 z-20 pointer-events-none">
+        <div class="w-full h-[1px] bg-outline-variant relative">
+            <div class="absolute left-[65%] top-1/2 -translate-y-1/2 w-4 h-4 bg-primary rotate-45 aurora-pulse"></div>
+            <div class="absolute left-[65%] top-6 font-mono text-[9px] text-primary uppercase tracking-[0.2em]">Live Expedition Sync Point</div>
+        </div>
+    </div>
+</main>
+
+<footer class="w-full py-8 bg-[#030408] border-t border-[rgba(132,149,136,0.1)] flex flex-col md:flex-row justify-between items-center px-12 max-w-full font-mono text-[10px] tracking-tighter uppercase">
+    <div class="text-[#F4F5F6]/40 mb-4 md:mb-0">© 2024 SENTINEL RESEARCH. ALL TELEMETRY ENCRYPTED.</div>
+    <div class="flex gap-12 text-[#F4F5F6]/40">
+        <a href="#" class="hover:text-[#F4F5F6] transition-colors">Privacy</a>
+        <a href="#" class="hover:text-[#F4F5F6] transition-colors">Protocols</a>
+        <a href="#" class="hover:text-[#F4F5F6] transition-colors">Coordinates</a>
+    </div>
+    <div class="hidden md:block text-[#00FFA3]">AUTH_LEVEL_01_SECURED</div>
+</footer>
+
+</body>
+</html>
