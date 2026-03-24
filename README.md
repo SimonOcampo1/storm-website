@@ -1,49 +1,35 @@
-# SENTINEL - Experiencia Web
+# STORM - El Relámpago del Catatumbo
 
-Una experiencia web interactiva que abarca cuatro dominios distintos de seguimiento de fenómenos anómalos:
-- **El Atlas**: El panel central y núcleo de mapeo.
-- **Vórtice**: Seguimiento de anomalías gravitacionales y espaciales.
-- **Telemetría**: Métricas avanzadas y fuentes de datos sensoriales.
-- **Archivo**: Registros históricos y catálogo de clasificación.
+Una experiencia web interactiva y cinematográfica dedicada al monitoreo y visualización de fenómenos atmosféricos anómalos en la cuenca del Lago de Maracaibo.
 
-## Stack Tecnológico
-- **React 19**: Arquitectura moderna basada en componentes.
-- **Vite**: Herramienta de construcción y servidor de desarrollo ultra rápido.
-- **Tailwind CSS v4**: Framework de CSS orientado a utilidades con soporte nativo para capas de cascada.
-- **GSAP & ScrollTrigger**: Animaciones personalizadas basadas en scroll y efectos de paralaje.
-- **Lenis**: Desplazamiento suave (smooth scrolling) para interacciones inmersivas.
-- **Material Symbols**: Sistema de iconos integrados.
-- **Google Fonts**: Space Grotesk, JetBrains Mono, Noto Serif.
+## Features
+- **Estética Brutalista & Cyber-Noir**: Diseño de alta fidelidad con acentos neón `#00FFA3` sobre una paleta de espacio profundo `#030408`.
+- **Inmersión Atmosférica**: Fondos de video dinámicos y composiciones visuales que capturan la magnitud de 1.6 millones de voltios.
+- **Navegación Táctica de Contexto**: Sistema de navegación unificado que sincroniza el estado activo a través de los cuatro dominios principales (Atlas, Vórtice, Telemetría, Archivo).
+- **Interacción de Sub-píxeles**: Desplazamiento ultra suave orquestado por Lenis y animaciones coreografiadas con GSAP.
+- **Visualización de Telemetría**: Paneles de datos en tiempo real y mapas topográficos integrados mediante componentes reactivos.
 
-## Instalación y Ejecución
-1. Clona el repositorio.
-2. Instala las dependencias:
-    ```bash
-    npm install
-    ```
-3. Inicia el servidor de desarrollo:
-    ```bash
-    npm run dev
-    ```
-4. Abre `http://localhost:5173` en tu navegador.
+## Estructura de Archivos
+- `index.html`: Punto de entrada de la aplicación y montaje del DOM para el motor de Vite.
+- `src/App.jsx`: Núcleo de la aplicación donde reside el enrutamiento principal entre dominios.
+- `src/pages/Vortice.jsx`: Módulo de seguimiento del Relámpago del Catatumbo, integrando activos locales como `nube-descarga.png`.
+- `public/`: Repositorio de activos de alto impacto, incluyendo `storm-video.mp4` y piezas visuales de telemetría.
+- `tailwind.config.js`: Definición de la arquitectura de diseño, tokens de color personalizados y capas de cascada.
 
-## Estructura del Proyecto
-```text
-.
-├── src/
-│   ├── components/    # Elementos de UI reutilizables (Navbar, Footer, etc.)
-│   ├── pages/         # Componentes de página (Atlas, Vortice, Telemetria, Archivo)
-│   ├── hooks/         # Hooks personalizados de React (useScrollEffects)
-│   └── App.jsx        # Entrada principal de la aplicación y enrutamiento
-├── public/            # Activos estáticos (Videos, Iconos, Imágenes locales)
-├── index.html         # Punto de entrada de Vite
-├── tailwind.config.js # Configuración de Tailwind CSS
-├── vite.config.js     # Configuración de Vite
-└── README.md          # Documentación del proyecto
+## Tecnologías Utilizadas
+- React 19 (Arquitectura de componentes moderna)
+- Tailwind CSS v4 (Sistema de diseño basado en utilidades de última generación)
+- GSAP & ScrollTrigger (Motor de animaciones profesionales)
+- Lenis (Smooth Scrolling Engine de alto rendimiento)
+- Vite (Entorno de desarrollo y construcción ultra-rápido)
+
+## Configuración
+Para visualizar el proyecto localmente y experimentar la inmersión completa, instala las dependencias y ejecuta el servidor de desarrollo:
+
+```bash
+# Instalación de dependencias
+npm install
+
+# Ejecución del entorno de desarrollo
+npm run dev
 ```
-
-## Características
-- **Diseño Cinemático**: Glassmorphism, acentos neón (primario `#00FFA3`), fondos de espacio profundo (`#030408`).
-- **Navegación Unificada**: Navegación principal sensible al contexto sincronizada en todas las páginas con estados activos.
-- **Interacción Fluida**: Desplazamiento suave de sub-píxeles con animaciones GSAP y Lenis.
-- **Visuales de Telemetría**: Paneles SVG responsivos y flujos de datos dinámicos.
