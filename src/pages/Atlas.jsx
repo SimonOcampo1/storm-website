@@ -55,7 +55,7 @@ export default function Atlas() {
     <div className="text-on-surface font-body overflow-x-hidden selection:bg-primary selection:text-background min-h-screen" style={{ background: 'transparent', position: 'relative', zIndex: 1 }}>
 
       {/* Fixed video background — always behind all page content */}
-      <div style={{ position: 'fixed', inset: 0, zIndex: -1 }}>
+      <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100svh', zIndex: -1, overflow: 'hidden' }}>
         <img
           src="/thunder.png"
           alt=""
@@ -78,7 +78,7 @@ export default function Atlas() {
       </div>
 
       {/* ── Hero section ── */}
-      <main className="relative min-h-screen flex flex-col justify-end pb-16 md:pb-20 px-6 md:px-12 lg:px-24">
+      <main className="relative min-h-[100svh] flex flex-col justify-end pb-32 md:pb-20 px-6 md:px-12 lg:px-24">
 
         {/* Top telemetry overlays — hidden on small screens */}
         <div className="hidden sm:flex absolute top-28 left-6 md:left-12 flex-col gap-1.5 opacity-60 pointer-events-none select-none">
