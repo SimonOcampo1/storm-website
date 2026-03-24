@@ -1,53 +1,49 @@
-# SENTINEL - Web Experience
+# SENTINEL - Experiencia Web
 
-An interactive web experience encompassing four distinct domains of anomalous phenomena tracking:
-- **El Atlas** (`index.html`): The central dashboard and mapping core.
-- **Vórtice** (`vortice.html`): Gravitational and spatial anomaly tracking.
-- **Telemetría** (`telemetria.html`): Advanced metrics and sensory data feeds.
-- **Archivo** (`archivo.html`): Historical records and classification catalog.
+Una experiencia web interactiva que abarca cuatro dominios distintos de seguimiento de fenómenos anómalos:
+- **El Atlas**: El panel central y núcleo de mapeo.
+- **Vórtice**: Seguimiento de anomalías gravitacionales y espaciales.
+- **Telemetría**: Métricas avanzadas y fuentes de datos sensoriales.
+- **Archivo**: Registros históricos y catálogo de clasificación.
 
-## Tech Stack
-- **HTML5**: Semantic and accessible document structure.
-- **Tailwind CSS v3**: Utility-first CSS framework via CDN with custom configurations (see `assets/js/tailwind.config.js`).
-- **Vanilla CSS**: Extracted global animations, effects, and typography in `assets/css/styles.css`.
-- **GSAP & ScrollTrigger**: Custom scroll-based animations for elements and parallax effects.
-- **Lenis**: Smooth scrolling for immersive interactions.
-- **Material Symbols**: Scalable vector icons.
-- **Google Fonts**: Nunito Sans, Space Grotesk, JetBrains Mono, Noto Serif.
+## Stack Tecnológico
+- **React 19**: Arquitectura moderna basada en componentes.
+- **Vite**: Herramienta de construcción y servidor de desarrollo ultra rápido.
+- **Tailwind CSS v4**: Framework de CSS orientado a utilidades con soporte nativo para capas de cascada.
+- **GSAP & ScrollTrigger**: Animaciones personalizadas basadas en scroll y efectos de paralaje.
+- **Lenis**: Desplazamiento suave (smooth scrolling) para interacciones inmersivas.
+- **Material Symbols**: Sistema de iconos integrados.
+- **Google Fonts**: Space Grotesk, JetBrains Mono, Noto Serif.
 
-## Setup & Running
-1. Clone the repository.
-2. Since routing is handled via basic `.html` files, you can simply run any local server to experience it. For instance:
+## Instalación y Ejecución
+1. Clona el repositorio.
+2. Instala las dependencias:
     ```bash
-    npx serve
+    npm install
     ```
-    or
+3. Inicia el servidor de desarrollo:
     ```bash
-    python -m http.server
+    npm run dev
     ```
-3. Open `http://localhost:3000` (or the equivalent port) in your browser.
+4. Abre `http://localhost:5173` en tu navegador.
 
-## Project Structure
+## Estructura del Proyecto
 ```text
 .
-├── index.html        # El Atlas (Home)
-├── archivo.html      # Archivo Page
-├── telemetria.html   # Telemetria Page
-├── vortice.html      # Vórtice Page
-├── README.md         # Project documentation
-└── assets/
-    ├── css/
-    │   └── styles.css        # Global styles and custom animations
-    └── js/
-        ├── tailwind.config.js # Tailwind CSS configuration
-        └── main.js           # Core JS (GSAP bindings, Lenis init, dynamic logic)
+├── src/
+│   ├── components/    # Elementos de UI reutilizables (Navbar, Footer, etc.)
+│   ├── pages/         # Componentes de página (Atlas, Vortice, Telemetria, Archivo)
+│   ├── hooks/         # Hooks personalizados de React (useScrollEffects)
+│   └── App.jsx        # Entrada principal de la aplicación y enrutamiento
+├── public/            # Activos estáticos (Videos, Iconos, Imágenes locales)
+├── index.html         # Punto de entrada de Vite
+├── tailwind.config.js # Configuración de Tailwind CSS
+├── vite.config.js     # Configuración de Vite
+└── README.md          # Documentación del proyecto
 ```
 
-## Features
-- **Cinematic Design**: Glassmorphism, neon accents (primary `#00FFA3`), deep space backgrounds (`#030408`), responsive layout matching the `sublime_event_horizon` aesthetic.
-- **Unified Navigation**: Context-aware main navigation synced across all pages with active states.
-- **Smooth Interaction**: Sub-pixel smooth scrolling with animated staggered entrances.
-- **Telemetry Visuals**: SVG dashboards, rotating scopes, pulsing nodes, responsive graphs.
-
-## Credits
-Designed and engineered as part of the `sublime_event_horizon` unification standard.
+## Características
+- **Diseño Cinemático**: Glassmorphism, acentos neón (primario `#00FFA3`), fondos de espacio profundo (`#030408`).
+- **Navegación Unificada**: Navegación principal sensible al contexto sincronizada en todas las páginas con estados activos.
+- **Interacción Fluida**: Desplazamiento suave de sub-píxeles con animaciones GSAP y Lenis.
+- **Visuales de Telemetría**: Paneles SVG responsivos y flujos de datos dinámicos.
